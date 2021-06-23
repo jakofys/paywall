@@ -6,17 +6,17 @@ Paywall is a CLI tool for basic operation calculation based on Lightning Network
 
 ## Requirements
 
-- golang 1.13 or more
+- Golang 1.13 or more
+- Docker 20.10.7
 
 ## Installation
 
 > This default installation allow you to run locally the application.
 
-For be sure you are in compatible environment (os, golang version, etc...), run the verifying script:
 Make in first step following command in project folder:
 
 ```bash
-./setup-check.sh
+docker build Dockerfile && docker run bitcoin-regtest
 ```
 
 If the output show you that ok, then you can make:
@@ -29,7 +29,7 @@ go get
 
 To build the CLI tool, you have two possibilities.
 
-**First** and default behavior, run the `builder-tool.sh` script and then, build basicly your program according to current OS.
+**First** and default behavior, run the `go build paywall` script and then, build basicly your program according to current OS.
 
 **Second** way is to make you own build recipe executing:
 
