@@ -7,6 +7,12 @@ import (
 	"github.com/spf13/cobra"
 )
 
+// AddUp sum to member
+func SumTwoMembers(member1 int, member2 int) int {
+	return member1 + member2
+}
+
+//Handler to trigger on "add" call command
 func AddUpHandler(cmd *cobra.Command, args []string) error {
 	member1, err := strconv.Atoi(args[0])
 	if err != nil {
@@ -16,6 +22,6 @@ func AddUpHandler(cmd *cobra.Command, args []string) error {
 	if err != nil {
 		return err
 	}
-	fmt.Printf("Sum of %d + %d equal to %d \n", member1, member2, member1+member2)
+	fmt.Printf("Sum of %d + %d equal to %d \n", member1, member2, SumTwoMembers(member1, member2))
 	return nil
 }

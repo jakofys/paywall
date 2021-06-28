@@ -8,18 +8,18 @@ import (
 
 //Test simple addition operation
 func TestAddUp(t *testing.T) {
-	memberOne := "5"
-	memberTwo := "10"
-	if err := handler.AddUpHandler(nil, []string{memberOne, memberTwo}); err != nil {
-		t.Errorf("AddUp function is corrupt, %s + %s got want %d", memberOne, memberTwo, 15)
+	memberOne := 5
+	memberTwo := 10
+	if result := handler.SumTwoMembers(memberOne, memberTwo); result != 15 {
+		t.Errorf("AddUp function is corrupt, %d + %d got %d want %d", memberOne, memberTwo, result, 15)
 	}
 }
 
 //Test simple substraction operation
 func TestSubstract(t *testing.T) {
-	memberOne := "10"
-	memberTwo := "5"
-	if err := handler.SubstractHandler(nil, []string{memberOne, memberTwo}); err != nil {
-		t.Errorf("Substract function is corrupt, %s - %s, want %d", memberOne, memberTwo, 5)
+	memberOne := 10
+	memberTwo := 5
+	if result := handler.SubstractTwoMembers(memberOne, memberTwo); result != 5 {
+		t.Errorf("Substract function is corrupt, %d - %d, got %d want %d", memberOne, memberTwo, result, 5)
 	}
 }

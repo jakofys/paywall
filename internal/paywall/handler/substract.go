@@ -7,6 +7,10 @@ import (
 	"github.com/spf13/cobra"
 )
 
+func SubstractTwoMembers(member1 int, member2 int) int {
+	return member1 - member2
+}
+
 func SubstractHandler(cmd *cobra.Command, args []string) error {
 	member1, err := strconv.Atoi(args[0])
 	if err != nil {
@@ -16,6 +20,6 @@ func SubstractHandler(cmd *cobra.Command, args []string) error {
 	if err != nil {
 		return err
 	}
-	fmt.Printf("Substraction of %d + %d equal to %d \n", member1, member2, member1-member2)
+	fmt.Printf("Substraction of %d + %d equal to %d \n", member1, member2, SubstractTwoMembers(member1, member2))
 	return nil
 }
