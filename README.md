@@ -107,5 +107,7 @@ paywall add 10 5
 ## Ressoures
 
 [Cobra Go](https://github.com/spf13/cobre): CLI implementation tool write in go
+
 [Viper Go](https://github.com/spf13/viper): Configuration package write in go
-[Lightning Network](https://lightning.network/): Is a way to make instant micro-transaction at low cost impact with smart contract in crypto currency context.
+
+[Lightning Network](https://lightning.network/): Is a way to make instant micro-transaction at low cost impact with smart contract in crypto currency context or get on this [video](https://www.youtube.com/watch?v=rrr_zPmEiME) of [Symply Explained](https://www.youtube.com/channel/UCnxrdFPXJMeHru_b4Q_vTPQ) channel.
