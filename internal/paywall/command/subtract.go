@@ -6,9 +6,9 @@ import (
 )
 
 var cmdSubstract = &cobra.Command{
-	Use:     "subtract",
-	Short:   "Substract two operation member",
-	RunE:    handler.SubstractHandler,
-	PostRun: handler.AmendTransactionHandler,
-	Args:    cobra.MinimumNArgs(2),
+	Use:      "subtract",
+	Short:    "Substract two operation member",
+	RunE:     handler.SubstractHandler,
+	PostRunE: handler.AmendTransactionHandler,
+	Args:     cobra.MinimumNArgs(2),
 }

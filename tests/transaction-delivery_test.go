@@ -1,12 +1,16 @@
 package tests
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/jakofys/paywall/internal/package/btc"
+)
 
 func TestCreateTransactionBTC(t *testing.T) {
 	addr := ""
 	amount := 1
 
-	if err := CreateTransactionBTC(addr, amount); err != nil {
+	if err := btc.CreateLNTransactionBTC(addr, amount); err != nil {
 		t.Errorf("RPC remote service BTC testnet not work for %s adresses", addr)
 	}
 }
@@ -14,7 +18,7 @@ func TestCreateTransactionBTC(t *testing.T) {
 func TestConnectionRPCServer(t *testing.T) {
 	addr := ""
 
-	if ok, _ := PingRemoteBitcoinServer(addr); ok {
-		t.Errorf("RPC remote connection to service BTC testnet failed, please verify configuration", addr)
+	if err := btc.PingRemoteBitcoinServer(addr); err != nil {
+		t.Errorf("API connection to service BTC testnet failed, please verify configuration for %s", addr)
 	}
 }

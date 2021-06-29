@@ -12,6 +12,8 @@ func SubstractTwoMembers(member1 int, member2 int) int {
 }
 
 func SubstractHandler(cmd *cobra.Command, args []string) error {
+
+	// Convert each member of operation from string to int
 	member1, err := strconv.Atoi(args[0])
 	if err != nil {
 		return err
