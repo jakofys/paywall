@@ -52,7 +52,7 @@ Finally, you can execute you distributable application named `paywall` previousl
 For run the CLI tool, just make:
 
 ```bash
-go run main.go
+go run /cmd/paywall/paywall.go
 ```
 
 ---
@@ -66,7 +66,7 @@ The format of CLI command is:
 paywall [command] [member_one] [member_two] [--mainnet]
 ```
 
-> If you've not build tool, replace `paywall` keyword example to `go run main.go`
+> If you've not build tool, replace `paywall` keyword example to `go run /cmd/paywall/paywall.go`
 
 <img src="https://img.icons8.com/emoji/452/exclamation-mark-emoji.png" width=16> Each member must be a integer.
 
