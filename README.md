@@ -29,7 +29,7 @@ go get
 
 To build the CLI tool, you have two possibilities.
 
-**First** and default behavior, run the `go build paywall` script and then, build basicly your program according to current OS.
+**First** and default behavior, run the `go build cmd/paywall/paywall.go paywall` script and then, build basicly your program according to current OS.
 
 **Second** way is to make you own build recipe executing:
 
