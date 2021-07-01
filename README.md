@@ -34,7 +34,7 @@ To build the CLI tool, you have two possibilities.
 **Second** way is to make you own build recipe executing:
 
 ```bash
-$ GOOS=[os_target] GOARCH=[cpu_arch] go build paywall
+$ GOOS=[os_target] GOARCH=[cpu_arch] go build cmd/paywall/paywall.go paywall
 ```
 
 Which `os_target` is OS platform on you want to build an executable, and `cpu_arch` is the architecture of the instruction set according to CPU.
